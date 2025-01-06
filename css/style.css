@@ -1,0 +1,18 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f8f9fa; /* Example background color */
+}
+
+/* Full-Width Image */
+.full-width-image {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any default spacing around the image */
+}
