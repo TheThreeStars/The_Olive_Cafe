@@ -7,32 +7,81 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #C57734; /* Example background color */
+  background-color: #C57734; /* Example background color */
+  padding: 10px 20px; /* Add padding for spacing */
 }
 
+/* Brand Logo */
 .navbar-brand img {
-    width: 6rem; /* Adjust the logo size */
-    height: auto;
+  width: 6rem; /* Default logo size */
+  height: auto;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: white; /* Text color */
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Default font size */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #145060; /* Hover background color */
+  color: white; /* Hover text color */
+}
+
+.navbar-nav .nav-link.active {
+  background-color: #145060; /* Active link background color */
+  color: white; /* Active link text color */
+  border-radius: 5px; /* Rounded corners for active link */
+}
+
+/* Navbar Toggler (Mobile Icon) */
+.navbar-toggler {
+  border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg'); /* Example hamburger icon */
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  /* Adjust logo size for smaller screens */
+  .navbar-brand img {
+    width: 5rem;
   }
 
+  /* Adjust navbar links for mobile */
   .navbar-nav .nav-link {
-    color: white; /* Text color */
-    font-weight: bold;
-    padding: 8px 15px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px; /* Rounded corners */
+    font-size: 0.9rem; /* Smaller text */
+    padding: 6px 10px; /* Adjust spacing */
   }
 
-  .navbar-nav .nav-link:hover {
-    background-color: #145060; /* Hover background color */
-    color: white; /* Hover text color */
+  /* Center nav links on smaller screens */
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Adjust logo size for large screens */
+  .navbar-brand img {
+    width: 7rem;
   }
 
-  .navbar-nav .nav-link.active {
-    background-color: #145060; /* Active link background color */
-    color: white; /* Active link text color */
-    border-radius: 5px; /* Rounded corners for active link */
+  /* Increase link font size for larger screens */
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 20px;
   }
+}
+
 
 /* Full-Width Image */
 .full-width-image {
@@ -76,6 +125,7 @@ body {
 
 /* Contact Form */
 
+/* Container Background */
 .container-bg {
   background-image: url('https://i.ibb.co/nD2jzsp/contact-bg-1.png'); /* Use the direct link to the image */
   background-position: center; /* Center the background image */
@@ -84,18 +134,42 @@ body {
   background-size: cover; /* Make the background image cover the entire container */
   width: 100%; /* Set width to 100% to fill the parent container */
   height: 100vh; /* Set height to 100% of the viewport height */
-
+  text-align: center;
+  display: flex; /* Flexbox to center content vertically */
+  align-items: center; /* Align content in the center */
+  justify-content: center; /* Horizontally center content */
+  padding: 20px; /* Ensure padding around the edges */
 }
 
-.text{
+/* Text Styling */
+.text {
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
-  padding-top: 100px;
-  position: relative;
-  font-size: larger;
-
+  padding: 20px; /* Add padding on all sides */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  font-size: 1.2rem; /* Default font size for larger screens */
+  max-width: 800px; /* Limit the width of the text */
 }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .text {
+    font-size: 1rem; /* Smaller font size for tablets and smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 0.9rem; /* Further reduce font size for small mobile devices */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+
 .Welcome{
   font-weight: bold;
 }
@@ -159,38 +233,102 @@ footer {
     background-color: #C57734; /* Matches the orange background */
     color: white;
     padding: 30px 20px;
+    text-align: center;
 }
 
 .footer-logo img {
-    width: 120px; /* Adjust size of the logo */
-    height: auto;
+  width: 120px; 
+  height: auto;
+  margin-bottom: 15px;
+
 }
 
 .footer-text {
-    font-size: 0.9rem;
+  font-size: 0.9rem; 
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
+  width: 30px; 
+  height: 30px;
+  margin: 0 10px;
 }
 
 .footer-bottom {
-    background-color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: black;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: black;
 }
 
 .footer-bottom a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
+/* Media Queries for Responsiveness */
 
+/* For tablets and larger mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .footer-logo img {
+      width: 100px; /* Smaller logo */
+  }
+
+  .footer-text {
+      font-size: 0.8rem; /* Smaller text size */
+  }
+
+  .social-icons img {
+      width: 25px; /* Smaller icons */
+      height: 25px;
+      margin: 0 8px;
+  }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer-logo img {
+      width: 80px; /* Further reduce logo size */
+  }
+
+  .footer-text {
+      font-size: 0.7rem; /* Adjust text size for smaller screens */
+  }
+
+  .social-icons img {
+      width: 20px; /* Smaller icons */
+      height: 20px;
+      margin: 0 5px;
+  }
+
+  footer {
+      padding: 20px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .footer-bottom {
+      font-size: 0.7rem; /* Smaller text in footer bottom */
+  }
+}
+
+/* For large desktops and laptops (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .footer-logo img {
+      width: 150px; /* Larger logo for bigger screens */
+  }
+
+  .footer-text {
+      font-size: 1rem; /* Slightly larger text */
+  }
+
+  .social-icons img {
+      width: 40px; /* Larger icons */
+      height: 40px;
+      margin: 0 15px;
+  }
+}
 /*menu page*/
 
 .section-title {
