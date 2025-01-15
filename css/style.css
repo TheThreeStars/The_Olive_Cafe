@@ -84,9 +84,21 @@ body {
   background-size: cover; /* Make the background image cover the entire container */
   width: 100%; /* Set width to 100% to fill the parent container */
   height: 100vh; /* Set height to 100% of the viewport height */
-  
+
 }
 
+.text{
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+  font-size: larger;
+
+}
+.Welcome{
+  font-weight: bold;
+}
 
 .container-contact {
   max-width: 600px;
