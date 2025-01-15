@@ -13,30 +13,56 @@ body {
 
 /* Brand Logo */
 .navbar-brand img {
-  width: 6rem; /* Default logo size */
-  height: auto;
+  width: 43%; /* Default logo size */
+  /* height: auto; */
+}
+
+.navbar button:not(:disabled) {
+  cursor: pointer;
+  width: 10%;
+  border: none;
 }
 
 /* Navbar Links */
 .navbar-nav .nav-link {
   color: white; /* Text color */
   font-weight: bold;
-  padding: 8px 15px;
+  padding: 3px 5px !important; 
   transition: background-color 0.3s, color 0.3s;
   border-radius: 5px; /* Rounded corners */
   font-size: 1rem; /* Default font size */
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #145060; /* Hover background color */
+  /* background-color: #145060; Hover background color */
+  text-decoration: underline;
+  text-decoration-color: #145060;
+  text-decoration-thickness: 0.3rem;
+  /* transition: all 4s ease-in-out 1s; */
+  /* transition-property: left; */
+  /* transition-timing-function: linear; */
+  /* transition: 0.3s; */
   color: white; /* Hover text color */
 }
 
 .navbar-nav .nav-link.active {
-  background-color: #145060; /* Active link background color */
-  color: white; /* Active link text color */
+  /* background-color: #145060; Active link background color */
+  color: white !important; /* Active link text color */
   border-radius: 5px; /* Rounded corners for active link */
 }
+/* 
+@keyframes animatename{
+  0%{
+    transform: translateY(3px);
+  }
+  100%{
+    transform: translateY(-3px);
+  }
+}
+.navbar-nav .nav-link :hover{
+  animation: animatename 1s linear infinite;
+  animation: animation-name animation-duration animation-direction animation-iteration-count
+} */
 
 /* Navbar Toggler (Mobile Icon) */
 .navbar-toggler {
@@ -53,9 +79,9 @@ body {
 /* Responsive Media Queries */
 @media (max-width: 768px) {
   /* Adjust logo size for smaller screens */
-  .navbar-brand img {
+  /* .navbar-brand img {
     width: 5rem;
-  }
+  } */
 
   /* Adjust navbar links for mobile */
   .navbar-nav .nav-link {
@@ -71,9 +97,9 @@ body {
 
 @media (min-width: 1200px) {
   /* Adjust logo size for large screens */
-  .navbar-brand img {
+  /* .navbar-brand img {
     width: 7rem;
-  }
+  } */
 
   /* Increase link font size for larger screens */
   .navbar-nav .nav-link {
@@ -229,8 +255,8 @@ button:hover {
 
 
 /* Footer */
-footer {
-    background-color: #C57734; /* Matches the orange background */
+/* footer {
+    background-color: #C57734; Matches the orange background
     color: white;
     padding: 30px 20px;
     text-align: center;
@@ -247,6 +273,51 @@ footer {
   font-size: 0.9rem; 
   margin-bottom: 15px;
   text-align: center;
+  display: inline-flex;
+}
+
+#footer-text {
+  width: auto !important;
+}
+
+#footer-row {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.footer-logo {
+  width: 30%;
+}
+
+.footer-contnet {
+  background-color: #C57734;
+  padding: 3%;
+}
+
+.footer-cont {
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+}
+
+.logo-foot {
+  /* width: 20%; */
+  display: flex;
+  justify-content: start;
+}
+
+.logo-cont {
+  width: 37%;
+}
+
+.footer-texts {
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  float: right;
 }
 
 .social-icons img {
@@ -262,6 +333,13 @@ footer {
   font-size: 0.8rem;
   font-weight: bold;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-bottom p {
+  margin: 0;
 }
 
 .footer-bottom a {
@@ -377,3 +455,5 @@ footer {
     font-weight: bold;
     margin: 10px auto;
   }
+
+  
