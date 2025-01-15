@@ -7,12 +7,223 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #f8f9fa; /* Example background color */
+    background-color: #C57734; /* Example background color */
 }
+
+.navbar-brand img {
+    width: 16rem; /* Adjust the logo size */
+    height: auto;
+  }
+
+  .navbar-nav .nav-link {
+    color: white; /* Text color */
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; /* Rounded corners */
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: #145060; /* Hover background color */
+    color: white; /* Hover text color */
+  }
+
+  .navbar-nav .nav-link.active {
+    background-color: #145060; /* Active link background color */
+    color: white; /* Active link text color */
+    border-radius: 5px; /* Rounded corners for active link */
+  }
 
 /* Full-Width Image */
 .full-width-image {
     width: 100%;
+    margin: 0 auto; /* Centers the image */
     height: auto; /* Maintains aspect ratio */
     display: block; /* Removes any default spacing around the image */
 }
+
+.specialties {
+    background-color: #004a5e; /* Matches the teal background color */
+    color: white; /* Ensures text is readable */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+
+.specialties-container {
+    padding: 50px;
+    text-align: center;
+}
+
+.specialties-container h1 {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Adds slight rounding to images */
+    object-fit: cover;
+}
+
+
+
+.position-relative {
+    position: relative;
+}
+
+/* Contact Form */
+
+.container-bg {
+  background-image: url('https://i.ibb.co/nD2jzsp/contact-bg-1.png'); /* Use the direct link to the image */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Keep the background fixed during scrolling */
+  background-size: cover; /* Make the background image cover the entire container */
+  width: 100%; /* Set width to 100% to fill the parent container */
+  height: 100vh; /* Set height to 100% of the viewport height */
+  
+}
+
+
+.container-contact {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #145060;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a667b;
+}
+
+.response-message {
+  margin-top: 15px;
+  text-align: center;
+  color: #333;
+}
+
+
+/* Footer */
+footer {
+    background-color: #C57734; /* Matches the orange background */
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-logo img {
+    width: 120px; /* Adjust size of the logo */
+    height: auto;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*menu page*/
+
+.section-title {
+    text-align: center;
+    color: #C57734;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .menu-category {
+    font-size: 1.5rem;
+    color: #C57734;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .menu-item p {
+    margin: 0;
+  }
+  
+  .menu-item span {
+    font-weight: bold;
+  }
+  
+  .menu-description {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 10px auto;
+  }
