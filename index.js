@@ -1,29 +1,16 @@
-const form = document.getElementById('contact-form');
-        const responseMessage = document.getElementById('response-message');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Show a loading message
-            responseMessage.textContent = 'Sending...';
-
-            // Use Fetch API to submit the form data
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    responseMessage.textContent = 'Thank you for your message!';
-                    form.reset(); // Reset the form
-                } else {
-                    responseMessage.textContent = 'Oops! There was a problem submitting your message.';
-                }
-            })
-            .catch(error => {
-                responseMessage.textContent = 'Oops! There was a problem submitting your message.';
-            });
-        });
+// Highlight the active link dynamically
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the current page URL
+    const currentPage = window.location.pathname.split('/').pop();
+  
+    // Select all navbar links
+    const navLinks = document.querySelectorAll('.nav-link');
+  
+    // Loop through links and add the active class to the matching link
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  });
+  

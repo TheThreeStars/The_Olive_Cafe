@@ -5,100 +5,34 @@ body {
     font-family: Arial, sans-serif;
 }
 
- /* Header */
- nav {
-  background-color: #C57734;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* Navbar */
+.navbar {
+    background-color: #C57734; /* Example background color */
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-}
-
-.menu {
-  display: flex;
-  gap: 20px;
-}
-
-.menu li {
-  list-style: none;
-}
-
-.menu a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: background 0.3s, color 0.3s;
-}
-
-.menu a:hover {
-  background-color: #145060;
-  color: black;
-}
-
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  border-radius: 5px;
-}
-
-/* Mobile Menu */
-.menu.mobile {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  background-color: #C57734;
-  padding: 15px 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.menu.mobile li {
-  width: 100%;
-  text-align: center;
-}
-
-/* Mobile View */
-@media (max-width: 1024px) {
-  .menu {
-      display: none;
+.navbar-brand img {
+    width: 6rem; /* Adjust the logo size */
+    height: auto;
   }
 
-  .hamburger {
-      display: flex;
+  .navbar-nav .nav-link {
+    color: white; /* Text color */
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; /* Rounded corners */
   }
 
-  .menu.mobile.active {
-      display: flex;
+  .navbar-nav .nav-link:hover {
+    background-color: #145060; /* Hover background color */
+    color: white; /* Hover text color */
   }
-}
+
+  .navbar-nav .nav-link.active {
+    background-color: #145060; /* Active link background color */
+    color: white; /* Active link text color */
+    border-radius: 5px; /* Rounded corners for active link */
+  }
 
 /* Full-Width Image */
 .full-width-image {
