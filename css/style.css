@@ -19,7 +19,7 @@ body {
 
 .navbar button:not(:disabled) {
   cursor: pointer;
-  width: 10%;
+  width: 22%;
   border: none;
 }
 
@@ -76,6 +76,20 @@ body {
   height: 30px;
 }
 
+/* Media Queries for Responsiveness */
+
+/* For mobile devices (320x462px) */
+@media (max-width: 462px) {
+  .navbar-toggler-icon {
+      width: 25px; /* Reduce width for smaller screens */
+      height: 25px; /* Reduce height for smaller screens */
+      background-size: contain; /* Ensure the icon fits properly */
+      margin: 5px; /* Add slight margin for spacing */
+  }
+}
+
+
+
 /* Responsive Media Queries */
 @media (max-width: 768px) {
   /* Adjust logo size for smaller screens */
@@ -106,7 +120,17 @@ body {
     font-size: 1.1rem;
     padding: 10px 20px;
   }
+
+  .footer-texts {
+      font-size: 1.2rem; /* Smaller text size */
+      flex-direction: column; /* Stack text vertically */
+      align-items: center; /* Center-align content */
+      text-align: center; /* Center the text */
+      width: 100%; 
+  }
 }
+
+
 
 
 /* Full-Width Image */
@@ -153,7 +177,7 @@ body {
 
 /* Container Background */
 .container-bg {
-  background-image: url('https://i.ibb.co/nD2jzsp/contact-bg-1.png'); /* Use the direct link to the image */
+  background-image: url('https://i.ibb.co/SfRj50q/Untitled-design-1.png'); /* Use the direct link to the image */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-attachment: fixed; /* Keep the background fixed during scrolling */
@@ -173,7 +197,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px; /* Add padding on all sides */
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+  /*background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
   border-radius: 10px; /* Optional: Add rounded corners */
   font-size: 1.2rem; /* Default font size for larger screens */
   max-width: 800px; /* Limit the width of the text */
@@ -199,6 +223,25 @@ body {
 .Welcome{
   font-weight: bold;
 }
+
+
+/* Media Queries for Responsiveness */
+
+/* For mobile devices (320x462px) */
+@media (max-width: 462px) {
+  .Welcome {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+      text-align: center; /* Center align text */
+      margin: 10px 0; /* Add spacing for better visual balance */
+      padding: 5px; /* Add padding for a cleaner look */
+      line-height: 1.4; /* Improve readability with increased line height */
+  }
+}
+
+
+
+
+
 
 .container-contact {
   max-width: 600px;
@@ -406,6 +449,14 @@ button:hover {
       height: 40px;
       margin: 0 15px;
   }
+
+  .navbar-brand img{
+    width: 150px; /* Larger logo for bigger screens */
+    
+  }
+  .navbar-nav .nav-link{
+    font-size: 1.2rem; /* Larger text for bigger screens */
+  }
 }
 /*menu page*/
 
@@ -590,8 +641,8 @@ button:hover {
 /* For mobile devices (320x462px) */
 @media (max-width: 462px) {
   /* Footer Logo */
-  .footer-logo img {
-      width: 60px; /* Reduce logo size further for small screens */
+  .footer-logo  {
+      width: 100px; /* Reduce logo size further for small screens */
       height: auto; /* Maintain aspect ratio */
   }
 
@@ -613,7 +664,7 @@ button:hover {
 
   /* Footer Container */
   footer {
-      padding: 15px 5px; /* Reduce padding for smaller screens */
+      padding: 0px 0px; /* Reduce padding for smaller screens */
   }
 
   /* Footer Bottom */
@@ -625,5 +676,62 @@ button:hover {
 
   #footer-bottom p {
       margin: 5px 0; /* Add spacing between stacked items */
+  }
+}
+
+/* Media Queries for Laptop Screens (1440x1026px) */
+@media (min-width: 1026px) and (max-width: 1440px) {
+  .footer-texts {
+      font-size: 1.2rem; /* Slightly larger font for improved readability */
+      flex-direction: row; /* Align elements horizontally */
+      justify-content: space-between; /* Spread elements evenly across the container */
+      align-items: center; /* Ensure proper vertical alignment */
+      text-align: left; /* Align text to the left */
+      width: 70%; /* Constrain width for balanced layout */
+      margin: 0 auto; /* Center the container within the footer */
+  }
+}
+
+/* Media Queries for Laptop Screens (1440x1026px) */
+@media (min-width: 1026px) and (max-width: 1440px) {
+  .navbar {
+      padding: 15px 30px; /* Slightly larger padding for better spacing */
+      background-color: #b5672c; /* Adjusted background color for a richer tone */
+      display: flex; /* Ensure proper layout structure */
+      justify-content: space-between; /* Distribute items across the navbar */
+      align-items: center; /* Vertically align items */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+}
+
+/* Media Queries for Laptop Screens (1440x1026px) */
+@media (min-width: 1026px) and (max-width: 1440px) {
+  .navbar-nav .nav-link {
+      font-size: 1.3rem; /* Slightly larger font size for better readability */
+      padding: 8px 15px; /* Increased spacing for improved clickability */
+      color: #ffffff; /* Maintains white text for consistency */
+      font-weight: bold; /* Enhanced text emphasis */
+      transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+
+  .navbar-nav .nav-link:hover {
+      color: #f0a35e; /* Subtle hover color for better user interaction */
+      text-decoration: underline; /* Adds underline effect for clarity */
+      text-decoration-color: #145060; /* Keeps hover underline color consistent */
+  }
+}
+
+/* Media Queries for Laptop Screens (1440x1026px) */
+@media (min-width: 1026px) and (max-width: 1440px) {
+  .navbar-brand img {
+      width: 70%; /* Scales logo size appropriately for larger laptop screens */
+      height: auto; /* Maintains aspect ratio */
+      margin: 0 auto; /* Centers the logo for visual balance */
+      display: block; /* Ensures consistent placement */
+      transition: transform 0.3s ease; /* Smooth scaling effect for hover interactions */
+  }
+
+  .navbar-brand img:hover {
+      transform: scale(1.1); /* Slight zoom-in effect for hover interactivity */
   }
 }
