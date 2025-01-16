@@ -456,4 +456,174 @@ button:hover {
     margin: 10px auto;
   }
 
-  
+  /* Media Queries for Devices with Minimum Dimension of 320x462 */
+@media (max-width: 462px) and (min-width: 320px) {
+  /* General Styles */
+  body {
+    font-size: 0.85rem; /* Adjust font size for readability */
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 5px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .navbar-brand img {
+    width: 50%; /* Adjust logo size */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.8rem; /* Reduce text size */
+    padding: 3px 5px; /* Adjust padding */
+  }
+
+  .navbar-toggler {
+    width: 40px; /* Adjust size for smaller screens */
+    height: 40px;
+  }
+
+  .navbar-toggler-icon {
+    width: 25px; /* Adjust hamburger icon size */
+    height: 25px;
+  }
+
+  /* Full-Width Image */
+  .full-width-image {
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Limit height for small screens */
+  }
+
+  /* Specialties Section */
+  .specialties-container {
+    padding: 20px; /* Reduce padding */
+  }
+
+  .specialties-container h1 {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .grid-item img {
+    border-radius: 3px; /* Reduce rounding */
+  }
+
+  /* Contact Form */
+  .container-contact {
+    margin: 20px auto; /* Adjust margins */
+    padding: 10px; /* Adjust padding */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduce heading size */
+  }
+
+  label {
+    font-size: 0.8rem; /* Adjust label size */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 0.85rem; /* Adjust input font size */
+  }
+
+  button {
+    font-size: 0.9rem; /* Adjust button text size */
+  }
+
+  .response-message {
+    font-size: 0.8rem; /* Adjust font size */
+  }
+
+  /* Footer */
+  .footer-logo img {
+    width: 70px; /* Adjust logo size */
+  }
+
+  .footer-texts {
+    font-size: 0.75rem; /* Reduce text size */
+    flex-direction: column; /* Stack footer elements vertically */
+    align-items: flex-start;
+  }
+
+  .social-icons img {
+    width: 20px; /* Reduce icon size */
+    height: 20px;
+    margin: 5px; /* Adjust spacing */
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem; /* Reduce font size */
+  }
+
+  /* Menu Page */
+  .menu-category {
+    font-size: 1.2rem; /* Adjust category font size */
+  }
+
+  .menu-item {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+  }
+
+  .menu-item p {
+    font-size: 0.8rem; /* Reduce font size */
+  }
+
+  .menu-item span {
+    font-size: 0.9rem; /* Adjust price font size */
+  }
+
+  .menu-description {
+    font-size: 0.8rem; /* Adjust description size */
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem; /* Reduce font size */
+  }
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For mobile devices (320x462px) */
+@media (max-width: 462px) {
+  /* Footer Logo */
+  .footer-logo img {
+      width: 60px; /* Reduce logo size further for small screens */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Footer Text */
+  .footer-texts {
+      font-size: 0.65rem; /* Smaller text size */
+      flex-direction: column; /* Stack text vertically */
+      align-items: center; /* Center-align content */
+      text-align: center; /* Center the text */
+      width: 100%; /* Full width */
+  }
+
+  /* Social Icons */
+  .social-icons img {
+      width: 18px; /* Smaller icons */
+      height: 18px;
+      margin: 0 4px; /* Adjust spacing for smaller icons */
+  }
+
+  /* Footer Container */
+  footer {
+      padding: 15px 5px; /* Reduce padding for smaller screens */
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+      font-size: 0.6rem; /* Smaller text size for footer bottom */
+      padding: 5px; /* Adjust padding */
+      flex-direction: column; /* Stack text vertically */
+  }
+
+  #footer-bottom p {
+      margin: 5px 0; /* Add spacing between stacked items */
+  }
+}
