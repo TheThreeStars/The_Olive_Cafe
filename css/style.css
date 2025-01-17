@@ -239,3 +239,140 @@ footer {
     font-weight: bold;
     margin: 10px auto;
   }
+/* Parent container for horizontal scrolling */
+.category-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  scrollbar-width: auto; /* Default scrollbar width for modern browsers */
+  padding: 10px 0; /* Add some spacing for better visuals */
+  border-bottom: 2px solid #ccc; /* Optional bottom border for styling */
+}
+
+/* Style the scrollbar for webkit browsers (Chrome, Edge, Safari) */
+.category-buttons::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
+}
+
+.category-buttons::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.category-buttons::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Scrollbar track background color */
+}
+
+/* Button styles */
+.category-buttons button {
+  padding: 8px 16px; /* Adjust padding for a clean look */
+  font-size: 14px; /* Set font size */
+  background-color: transparent; /* Transparent background */
+  color: #333; /* Text color */
+  border: none; /* Remove borders */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Parent container for horizontal scrolling */
+.category-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  scrollbar-width: auto; /* Default scrollbar width for modern browsers */
+  padding: 10px 20px; /* Space between scroller and screen edges */
+  border-bottom: 2px solid #ccc; /* Optional bottom border for styling */
+  position: relative; /* For positioning the arrows */
+}
+
+/* Style the scrollbar for webkit browsers (Chrome, Edge, Safari) */
+.category-buttons::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
+}
+
+.category-buttons::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  position: relative;
+}
+
+.category-buttons::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Scrollbar track background color */
+}
+
+/* Button styles */
+.category-buttons button {
+  padding: 8px 16px; /* Adjust padding for a clean look */
+  font-size: 14px; /* Set font size */
+  background-color: transparent; /* Transparent background */
+  color: #333; /* Text color */
+  border: none; /* Remove borders */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Active button style */
+.category-buttons button.active {
+  background-color: #D17B2F; /* Active background color */
+  color: white; /* Active text color */
+  border-radius: 20px; /* Rounded corners */
+}
+
+
+
+/* Left arrow for scrolling */
+.scroll-arrow-left {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #8bc34a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Right arrow for scrolling */
+.scroll-arrow-right {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #8bc34a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+  
+  .section-title {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .menu-description {
+    font-size: 14px;
+    color: #555;
+  }
+  
