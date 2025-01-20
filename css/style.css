@@ -506,6 +506,42 @@ button:hover {
     font-weight: bold;
     margin: 10px auto;
   }
+  /* Media Queries for Mobile Screens (320px - 425px) */
+@media (max-width: 425px) {
+  .section-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+  }
+
+  .menu-category {
+      font-size: 1.2rem;
+      margin-top: 20px;
+  }
+
+  .menu-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+  }
+
+  .menu-item div {
+      margin-bottom: 10px;
+  }
+
+  .menu-item span {
+      align-self: flex-end;
+  }
+
+  .menu-description {
+      font-size: 0.8rem;
+  }
+
+  .icon {
+      width: 30px;
+      height: 30px;
+      font-size: 0.8rem;
+  }
+}
 
 /* Parent container for horizontal scrolling */
 .category-buttons {
