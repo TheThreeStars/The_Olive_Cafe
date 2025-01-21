@@ -79,6 +79,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             
+            document.addEventListener("DOMContentLoaded", function () {
+              const navbar = document.getElementById("navbar");
+              
+              // Check if the current page is the home page
+              if (window.location.pathname.endsWith("home.html") || window.location.pathname === "/") {
+                navbar.classList.add("transparent");
+              } else {
+                navbar.classList.remove("transparent");
+              }
+            });
+          
+          
+
+            
                         
 
 

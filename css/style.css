@@ -6,14 +6,19 @@ body {
 }
 
 /* Navbar */
+
 .navbar {
   background-color: #C57734; /* Example background color */
   padding: 10px 20px; /* Add padding for spacing */
 }
+.navbar-nav {
+  gap: 40px; 
+  margin-right: 3%;
+}
 
 /* Brand Logo */
 .navbar-brand img {
-  width: 43%; /* Default logo size */
+  width: 40%; 
   /* height: auto; */
 }
 
@@ -76,7 +81,110 @@ body {
   height: 30px;
 }
 
-/* Media Queries for Responsiveness */
+/* home banner */
+.land {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+}
+
+.land h1 {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  color: white;
+  font-size: 3rem;
+  font-weight: bolder;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.land span {
+  color: #FFD700; /* Gold color for cafe name */
+}
+
+#menu-button {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  padding: 10px 20px;
+  /* background-color: #FFD700; */
+  background-color: #FFD700;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #FFA500;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward movement for smoothness */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Add delays for a staggered effect */
+h1.fade-in {
+  animation-delay: 0.5s;
+}
+
+.menu-button.fade-in {
+  animation-delay: 1s;
+}
+/* Media query for mobile screens (max width of 480px) */
+@media (max-width: 320px) {
+  .land h1 {
+    top: 30%; /* Adjust text positioning */
+    left: 1%; /* Reduce left spacing */
+    font-size: 1rem; /* Adjust font size for mobile screens */
+    line-height: 1.2;
+  }
+
+  #menu-button {
+    top: 50%; /* Move button closer to the text */
+    left: 5%; /* Align button with the text */
+    padding: 8px 14px; /* Adjust padding for smaller buttons */
+    font-size: 1rem; /* Smaller font size for the button */
+  }
+}
+@media (max-width: 480px) {
+  .land h1 {
+    top: 30%; /* Adjust text positioning */
+    left: 5%; /* Reduce left spacing */
+    font-size: 2rem; /* Adjust font size for mobile screens */
+    line-height: 1.2;
+  }
+
+  #menu-button {
+    top: 50%; /* Move button closer to the text */
+    left: 5%; /* Align button with the text */
+    padding: 8px 14px; /* Adjust padding for smaller buttons */
+    font-size: 1rem; /* Smaller font size for the button */
+  }
+}
+
+
 
 /* For mobile devices (320x462px) */
 @media (max-width: 462px) {
@@ -88,9 +196,6 @@ body {
   }
 }
 
-
-
-/* Responsive Media Queries */
 @media (max-width: 768px) {
   /* Adjust logo size for smaller screens */
   /* .navbar-brand img {
@@ -106,6 +211,18 @@ body {
   /* Center nav links on smaller screens */
   .navbar-nav {
     text-align: center;
+  }
+  #menu-button {
+    top: 50%; /* Adjust button position */
+    left: 7%; /* Align with the text */
+    padding: 10px 18px; /* Adjust padding for better balance */
+    font-size: 1.1rem; /* Slightly smaller font size for the button */
+  }
+  .land h1 {
+    top: 30%; /* Adjust heading position for tablets */
+    left: 7%; /* Slightly reduce left margin */
+    font-size: 1.8rem; /* Moderate font size for tablet */
+    line-height: 1.3; /* Maintain spacing */
   }
 }
 
@@ -129,9 +246,6 @@ body {
       width: 100%; 
   }
 }
-
-
-
 
 /* Full-Width Image */
 .full-width-image {
@@ -172,6 +286,7 @@ body {
 .position-relative {
     position: relative;
 }
+
 
 /* Contact Form */
 
@@ -286,9 +401,9 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+/* button:hover {
   background-color: #1a667b;
-}
+} */
 
 .response-message {
   margin-top: 15px;
@@ -390,7 +505,6 @@ button:hover {
   color: inherit;
 }
 
-/* Media Queries for Responsiveness */
 
 /* For tablets and larger mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
@@ -713,11 +827,13 @@ button:hover {
     height: 25px;
   }
 
-  /* Full-Width Image */
   .full-width-image {
-    height: auto; /* Maintain aspect ratio */
-    max-height: 200px; /* Limit height for small screens */
-  }
+    height: 500px;
+    width: 100%; /* Make the image take up the full width of its container */
+    max-width: 510px; /* Ensure it doesn't exceed 510px */
+    object-fit: cover; /* Ensures the image is scaled correctly without distortion */
+    margin: 0 auto; /* Center the image */
+}
 
   /* Specialties Section */
   .specialties-container {
@@ -725,7 +841,7 @@ button:hover {
   }
 
   .specialties-container h1 {
-    font-size: 1.2rem; /* Adjust font size */
+    font-size: 1.7rem; /* Adjust font size */
   }
 
   .grid-item img {
