@@ -664,11 +664,19 @@ button {
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent wrapping */
   scrollbar-width: auto; /* Default scrollbar width for modern browsers */
-  padding: 10px 0; /* Add some spacing for better visuals */
-  border-bottom: 2px solid #ccc; /* Optional bottom border for styling */
+  padding: 10px 20px; /* Space between scroller and screen edges */
 }
 
-/* Style the scrollbar for webkit browsers (Chrome, Edge, Safari) */
+.category-buttons-container {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky; /* Standard syntax */
+  top: 0; /* Stick to the top of the page */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  background-color: white; /* Optional, gives a background color */
+  border-bottom: 2px solid #ccc; /* Optional border for styling */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional, adds a shadow for effect */
+}
+
 .category-buttons::-webkit-scrollbar {
   height: 8px; /* Height of the scrollbar */
 }
@@ -691,6 +699,12 @@ button {
   border: none; /* Remove borders */
   cursor: pointer;
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.category-buttons button.active {
+  background-color: #D17B2F; /* Active background color */
+  color: white; /* Active text color */
+  border-radius: 20px; /* Rounded corners */
 }
 
 /* Parent container for horizontal scrolling */
@@ -1026,4 +1040,6 @@ button {
       transform: scale(1.1); /* Slight zoom-in effect for hover interactivity */
   }
 }
+
+
 

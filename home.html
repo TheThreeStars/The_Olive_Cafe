@@ -12,6 +12,15 @@
     <title>The Olive Cafe</title>
     <!--Navbar-->
    <body>
+      <!-- Loader -->
+      <div id="overlay" class="overlay">
+        <div id="burger-loader" class="burger-loader hidden">
+          <div class="bun top-bun"></div>
+          <div class="patty"></div>
+          <div class="bun bottom-bun"></div>
+        </div>
+      </div>
+    
     <header>
         <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
@@ -48,13 +57,15 @@
       </nav>
     </header> 
     <div class="land">
-        <img src="assets/smashed-social-shoot-25-small-1725528597.jpg" alt="Burger" class="full-width-image">
+        <img src="assets/smashed-social-shoot-25-small-1725528597.jpg" loading="lazy" alt="Burger" class="full-width-image">
         <h1 class="animate__animated animate__fadeIn">
           Bite into the best<br>
           at <span>The Olive Cafe</span>
         </h1>
         <a href="menu.html" id="menu-button" class="menu-button animate__animated animate__fadeIn animate__delay-1s">Explore Menu</a>
       </div>
+
+  
       
             <!--Grid-->
             <section class="specialties">
@@ -167,3 +178,117 @@
     <script src="index.js"></script>
 </body>
 </html>
+
+<style>
+    /* loader */
+.burger-loader {
+  position: fixed; /* Fixed so it overlays the whole page */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* High z-index to appear above other elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  animation: bounce 1s infinite ease-in-out; /* Ensure consistent duration and timing */
+
+}
+
+/* Individual parts of the burger */
+.bun,
+.patty {
+  width: 50px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #FFD700; /* Gold for buns */
+}
+
+.patty {
+  background-color: #8B4513; /* Brown for patty */
+}
+
+/* Bounce animation applied to each element */
+.bun,
+.patty {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.bun:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.patty {
+  animation-delay: 0.4s;
+}
+.bun:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hidden {
+  display: none;/* hide loader by default */
+}
+
+
+/* active White overlay background when loader loads*/
+.overlay {
+  position: fixed; /* Fixed to cover the whole viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 999; /* High z-index to overlay other content */
+  display: none; 
+}
+
+.overlay.active {
+  display: block; 
+}
+
+/* For smaller screens (up to 480px) */
+@media (max-width: 480px) {
+  .burger-loader {
+    top: 50%; /* Still vertically centered */
+    left: 50%; /* Still horizontally centered */
+    transform: translate(-50%, -50%); /* No changes needed for centering */
+  }
+
+  /* Optional: Adjust the size of the loader elements for smaller screens */
+  .bun,
+  .patty {
+    width: 30px; /* Smaller width */
+    height: 6px; /* Smaller height */
+  }
+
+  .burger-loader {
+    gap: 3px; /* Reduce spacing between elements */
+  }
+}
+
+/* For medium screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .burger-loader {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Adjust element size for medium screens */
+  .bun,
+  .patty {
+    width: 40px;
+    height: 8px;
+  }
+}
+</style>
