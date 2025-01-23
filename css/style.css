@@ -301,6 +301,7 @@ h1.fade-in {
 
 
 .working-hours h2 {
+  font-weight: bolder;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   margin-bottom: 20px;
@@ -935,6 +936,11 @@ button {
     font-size: 14px;
     color: #555;
   }
+
+  /* Hide the category buttons when the loader is active */
+.category-buttons-container.hidden {
+  display: none;
+}
   
 
 

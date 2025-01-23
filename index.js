@@ -95,49 +95,59 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById('menu-button'); // The Explore Menu button
     const burgerLoader = document.getElementById('burger-loader');
     const overlay = document.getElementById('overlay');
-  
+    const categoryButtons = document.querySelector('.category-buttons-container');
+
     // Loop through all nav-link elements and attach an event listener
     loaderLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
             e.preventDefault(); // Prevent default behavior
-  
+
             // Show the loader
             overlay.classList.add('active');
             burgerLoader.classList.remove('hidden');
-  
-            // Set a minimum display time of 3 seconds for the loader
-            const minLoaderTime = 2000; // 3 seconds in milliseconds
-  
+
+            // Hide category buttons smoothly but don't block the transition
+            if (categoryButtons) {
+                categoryButtons.classList.add('hidden');
+            }
+
             // Get the target URL from the link's href attribute
             const targetUrl = link.getAttribute('href');
-  
+
+            // Set a minimum display time for the loader
+            const minLoaderTime = 2000; // 2 seconds in milliseconds
+
             // Simulate loading time and redirect after the delay
             setTimeout(() => {
                 window.location.href = targetUrl; // Redirect to the target URL
             }, minLoaderTime);
         });
     });
-  
+
     // Add event listener to the menu button to trigger the same loader
     if (menuButton) {
-      menuButton.addEventListener('click', (e) => {
-          e.preventDefault(); // Prevent default behavior
-  
-          // Show the loader
-          overlay.classList.add('active');
-          burgerLoader.classList.remove('hidden');
-  
-          // Set a minimum display time of 3 seconds for the loader
-          const minLoaderTime = 2000; // 3 seconds in milliseconds
-  
-          // Get the target URL from the menu button's href attribute
-          const targetUrl = menuButton.getAttribute('href');
-  
-          // Simulate loading time and redirect after the delay
-          setTimeout(() => {
-              window.location.href = targetUrl; // Redirect to the target URL
-          }, minLoaderTime);
-      });
+        menuButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default behavior
+
+            // Show the loader
+            overlay.classList.add('active');
+            burgerLoader.classList.remove('hidden');
+
+            // Hide category buttons smoothly but don't block the transition
+            if (categoryButtons) {
+                categoryButtons.classList.add('hidden');
+            }
+
+            // Get the target URL from the menu button's href attribute
+            const targetUrl = menuButton.getAttribute('href');
+
+            // Set a minimum display time for the loader
+            const minLoaderTime = 2000; // 2 seconds in milliseconds
+
+            // Simulate loading time and redirect after the delay
+            setTimeout(() => {
+                window.location.href = targetUrl; // Redirect to the target URL
+            }, minLoaderTime);
+        });
     }
-  });
-  
+});
