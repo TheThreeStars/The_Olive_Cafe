@@ -58,24 +58,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Scroll to section functionality
 function scrollToSection(sectionId) {
-  // Scroll to the specified section
-  const section = document.getElementById(sectionId);
-  if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  // Handle active class for buttons
-  const buttons = document.querySelectorAll('.category-buttons button');
-  buttons.forEach(button => button.classList.remove('active')); // Remove active class from all buttons
-
-  // Add active class to the clicked button
-  const clickedButton = Array.from(buttons).find(
+    // Scroll to the specified section
+    const section = document.getElementById(sectionId);
+    if (section) {
+      // Calculate the offset position accounting for the category buttons container height and additional space
+      const offset = document.querySelector('.category-buttons-container').offsetHeight;
+      const additionalSpace = 20; // Adjust this value to increase or decrease the space
+      const sectionPosition = section.offsetTop - offset - additionalSpace;
+  
+      // Smoothly scroll to the calculated position
+      window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
+    }
+  
+    // Handle active class for buttons
+    const buttons = document.querySelectorAll('.category-buttons button');
+    buttons.forEach(button => button.classList.remove('active')); // Remove active class from all buttons
+  
+    // Add active class to the clicked button
+    const clickedButton = Array.from(buttons).find(
       button => button.textContent.trim().toLowerCase() === sectionId.toLowerCase()
-  );
-  if (clickedButton) {
+    );
+    if (clickedButton) {
       clickedButton.classList.add('active');
+    }
   }
-}
+  
+  
 
 // Scroll Left
 function scrollLeft() {
@@ -151,3 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// homepage
+

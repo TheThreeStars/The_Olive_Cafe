@@ -249,41 +249,42 @@ h1.fade-in {
 
 /* Full-Width Image */
 .full-width-image {
-    width: 100%;
-    margin: 0 auto; /* Centers the image */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Removes any default spacing around the image */
+  width: 100%;
+  margin: 0 auto; /* Centers the image */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes any default spacing around the image */
 }
 
 .specialties {
-    background-color: #004a5e; /* Matches the teal background color */
-    color: white; /* Ensures text is readable */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0; 
+  background-color: #004a5e; /* Matches the teal background color */
+  color: white; /* Ensures text is readable */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0; 
 }
 
 
 .specialties-container {
-    padding: 50px;
-    text-align: center;
+  padding: 50px;
+  text-align: center;
 }
 
 .specialties-container h1 {
-    font-weight: bold;
-    margin-bottom: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .grid-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px; /* Adds slight rounding to images */
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Adds slight rounding to images */
+  object-fit: cover;
 }
 
 .position-relative {
-    position: relative;
+  position: relative;
 }
+
 
 /* rest of landing page */
 .working-hours {
