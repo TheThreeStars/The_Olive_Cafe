@@ -1066,7 +1066,7 @@ button {
   }
 
   .full-width-image {
-    height: 500px;
+    height: 550px;
     width: 100%; /* Make the image take up the full width of its container */
     max-width: 510px; /* Ensure it doesn't exceed 510px */
     object-fit: cover; /* Ensures the image is scaled correctly without distortion */
