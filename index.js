@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // homepage
   // Function to check if an element is in the viewport
+// Function to check if an element is in the viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -173,6 +174,14 @@ function isInViewport(element) {
   // Add scroll listener to apply 'in-view' class
   document.addEventListener("scroll", () => {
     const images = document.querySelectorAll(".grid-item img");
+    const title = document.querySelector(".title"); // Target the title
+  
+    // Check for the title
+    if (title && isInViewport(title) && !title.classList.contains("in-view")) {
+      title.classList.add("in-view");
+    }
+  
+    // Check for images
     images.forEach((img) => {
       if (isInViewport(img) && !img.classList.contains("in-view")) {
         img.classList.add("in-view");
@@ -180,13 +189,4 @@ function isInViewport(element) {
     });
   });
   
-
-  document.addEventListener("scroll", () => {
-    const images = document.querySelectorAll(".grid-item img");
-    images.forEach((img) => {
-      if (isInViewport(img) && !img.classList.contains("in-view")) {
-        img.classList.add("in-view");
-      }
-    });
-  });
   
