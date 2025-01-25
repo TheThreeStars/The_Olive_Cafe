@@ -161,4 +161,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // homepage
+  // Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight * 0.9 && // Trigger slightly before it enters the viewport
+      rect.bottom > 0 // Ensure it's not scrolled past the viewport
+    );
+  }
+  
+  // Add scroll listener to apply 'in-view' class
+  document.addEventListener("scroll", () => {
+    const images = document.querySelectorAll(".grid-item img");
+    images.forEach((img) => {
+      if (isInViewport(img) && !img.classList.contains("in-view")) {
+        img.classList.add("in-view");
+      }
+    });
+  });
+  
 
+  document.addEventListener("scroll", () => {
+    const images = document.querySelectorAll(".grid-item img");
+    images.forEach((img) => {
+      if (isInViewport(img) && !img.classList.contains("in-view")) {
+        img.classList.add("in-view");
+      }
+    });
+  });
+  

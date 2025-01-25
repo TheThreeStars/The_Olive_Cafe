@@ -112,7 +112,7 @@ body {
 
 #menu-button {
   position: absolute;
-  top: 45%;
+  top: 39%;
   left: 10%;
   padding: 10px 20px;
   /* background-color: #FFD700; */
@@ -132,7 +132,7 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px); /* Slight upward movement for smoothness */
+    transform: translateY(10px); /* Slight upward movement for smoothness */
   }
   to {
     opacity: 1;
@@ -146,11 +146,11 @@ body {
 
 /* Add delays for a staggered effect */
 h1.fade-in {
-  animation-delay: 0.5s;
+  animation-delay: 2s;
 }
 
 .menu-button.fade-in {
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 /* Media query for mobile screens (max width of 480px) */
 @media (max-width: 320px) {
@@ -255,35 +255,124 @@ h1.fade-in {
   display: block; /* Removes any default spacing around the image */
 }
 
+/* Main Styles */
 .specialties {
-  background-color: #004a5e; /* Matches the teal background color */
-  color: white; /* Ensures text is readable */
+  background-color: #004a5e;
+  color: white;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
-
 .specialties-container {
-  padding: 50px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .specialties-container h1 {
   font-weight: bold;
   margin-bottom: 30px;
+  font-size: 2.5rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Grid Items */
+.grid-item {
+  position: relative;
+  overflow: hidden;
 }
 
 .grid-item img {
   width: 100%;
   height: auto;
-  border-radius: 5px; /* Adds slight rounding to images */
+  border-radius: 8px;
   object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.position-relative {
-  position: relative;
+/* Hover Effect */
+.grid-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+/* Apply initial styles for hidden state */
+.grid-item img {
+  opacity: 0;
+  transform: translateY(30px); /* Start slightly below its position */
+  transition: all 0.5s ease; /* Smooth transition */
+}
+
+/* When the image is in view, trigger animation */
+.grid-item img.in-view {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animations */
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .specialties-container {
+    padding: 20px;
+  }
+
+  .grid-item {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .grid-item:nth-child(odd) {
+    animation-delay: 0.2s;
+  }
+
+  .grid-item:nth-child(even) {
+    animation-delay: 0.4s;
+  }
+}
+
+/* Add delays for staggered animation */
+.grid-item:nth-child(1) img.in-view {
+  animation-delay: 0.1s;
+}
+.grid-item:nth-child(2) img.in-view {
+  animation-delay: 0.2s;
+}
+.grid-item:nth-child(3) img.in-view {
+  animation-delay: 0.3s;
+}
+
 
 
 /* rest of landing page */
