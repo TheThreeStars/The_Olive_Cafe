@@ -352,6 +352,7 @@ h1.fade-in {
   border-radius: 5px;
   text-decoration: none; /* Remove underline */
   font-size: 16px;
+  font-weight: bold;
   opacity: 0; /* Initially hidden */
   visibility: hidden; /* Hidden from screen readers */
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
