@@ -189,4 +189,5 @@ function isInViewport(element) {
     });
   });
   
+  // home gallery buttons
   

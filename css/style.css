@@ -334,6 +334,64 @@ h1.fade-in {
     transform: translateY(0);
   }
 }
+/* Position the button over the image */
+.grid-item {
+  position: relative; /* Create a containing context */
+  overflow: hidden; /* Hide button overflow outside the image */
+}
+
+.overlay-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  font-size: 16px;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Hidden from screen readers */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show button on hover */
+.grid-item:hover .overlay-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover effect for button itself */
+.overlay-btn:hover {
+  background-color: #FFD700;
+  color: black;
+  font-weight: bold;
+  transform: translate(-50%, -50%) scale(1.1); /* Slight zoom effect */
+}
+
+/* Mobile-friendly tap effect */
+@media (hover: none) {
+  .overlay-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/* Dimming effect for the image */
+.grid-item img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Dim the image and add a slight zoom on hover */
+.grid-item:hover img,
+.grid-item:focus img {
+  filter: brightness(0.5); /* Dim the image */
+  transform: scale(1.05); /* Slight zoom */
+}
+
 
 /* Animations */
 /* @keyframes fadeIn {
