@@ -161,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // homepage
-  // Function to check if an element is in the viewport
 // Function to check if an element is in the viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -188,6 +187,4 @@ function isInViewport(element) {
       }
     });
   });
-  
-  // home gallery buttons
-  
+    

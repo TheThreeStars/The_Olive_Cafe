@@ -636,6 +636,7 @@ h1.fade-in {
 /* Closing and Highlight Styling */
 .welcome-closing {
   font-size: 1.2rem;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
