@@ -582,68 +582,102 @@ h1.fade-in {
 
 
 
-/* Contact Form */
-
-/* Container Background */
+/* about page */
 .container-bg {
-  background-image: url('https://i.ibb.co/SfRj50q/Untitled-design-1.png'); /* Use the direct link to the image */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-attachment: fixed; /* Keep the background fixed during scrolling */
-  background-size: cover; /* Make the background image cover the entire container */
-  width: 100%; /* Set width to 100% to fill the parent container */
-  height: 100vh; /* Set height to 100% of the viewport height */
-  text-align: center;
-  display: flex; /* Flexbox to center content vertically */
-  align-items: center; /* Align content in the center */
-  justify-content: center; /* Horizontally center content */
-  padding: 20px; /* Ensure padding around the edges */
+  background-image: url('https://i.ibb.co/SfRj50q/Untitled-design-1.png'); /* Background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-/* Text Styling */
+/* Text Container */
 .text {
-  color: white;
-  font-family: Arial, sans-serif;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
   text-align: center;
-  padding: 20px; /* Add padding on all sides */
-  /*background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  font-size: 1.2rem; /* Default font size for larger screens */
-  max-width: 800px; /* Limit the width of the text */
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 12px;
 }
 
-/* Responsive Media Queries */
+/* Title Styling */
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Subtitle Styling */
+.welcome-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Description Paragraphs */
+.welcome-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.welcome-description span {
+  font-weight: bold;
+  color: #FFD700; /* Highlight text with a golden color */
+}
+
+/* Closing and Highlight Styling */
+.welcome-closing {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.welcome-highlight {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .text {
-    font-size: 1rem; /* Smaller font size for tablets and smaller screens */
-    padding: 15px; /* Adjust padding */
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .welcome-description,
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+
+  .welcome-highlight {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .text {
-    font-size: 0.9rem; /* Further reduce font size for small mobile devices */
-    padding: 10px; /* Adjust padding for smaller screens */
+    padding: 15px;
   }
-}
 
+  .welcome-title {
+    font-size: 1.5rem;
+  }
 
+  .welcome-description,
+  .welcome-subtitle {
+    font-size: 0.9rem;
+  }
 
-.Welcome{
-  font-weight: bold;
-}
-
-
-/* Media Queries for Responsiveness */
-
-/* For mobile devices (320x462px) */
-@media (max-width: 462px) {
-  .Welcome {
-      font-size: 1rem; /* Adjust font size for smaller screens */
-      text-align: center; /* Center align text */
-      margin: 10px 0; /* Add spacing for better visual balance */
-      padding: 5px; /* Add padding for a cleaner look */
-      line-height: 1.4; /* Improve readability with increased line height */
+  .welcome-highlight {
+    font-size: 1rem;
   }
 }
 
@@ -652,6 +686,7 @@ h1.fade-in {
 
 
 
+/* contact form */
 .container-contact {
   max-width: 600px;
   margin: 50px auto;
